@@ -1,0 +1,7 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+[project]
+name = "quantlab"
+version = "0.1.0"
+description = "Quant Lab — sistema quantitativo (F0-F4, R1 PENDENTE)"
+requires-python = ">=3.11"
