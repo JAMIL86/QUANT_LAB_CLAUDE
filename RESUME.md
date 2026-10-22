@@ -52,3 +52,9 @@ Retomar Fase 0 (backtest XAUUSD/MT5) após encerramento forçado. Não repetir e
 - Checkpoint: work/checkpoint_fase3.json atualizado (prev=70b8acf, status INCONCLUSIVO, R1 pendente).
 - Gate R1: NÃO aprovado — não declarar lucrativo sem prova.
 - Próximo autorizado: Fase 3 completo (PBO) apenas após gate R1; Fase 4 (relatório) só após todos os gates.
+
+## 2026-10-22 — Fase 4 relatório (concluído com R1 pendente)
+- Relatórios: reports/relatorio-fase4.json + .html (status INCONCLUSIVO, SINTETICO).
+- Nenhuma declaração de lucrativo sem prova (R1 respeitado completamente).
+- Próximos passos autorizados: aprovação de gate R1 + conclusão do PBO (Fase 3 completa) + Fase 4 revisão se necessário.
+- Nenhum arquivo .env commitado; R9 verificado (código limpo).

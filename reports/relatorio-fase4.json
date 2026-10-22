@@ -1,0 +1,19 @@
+{
+  "fase": 4,
+  "titulo": "Relatorio Quant Lab — Fase 4 (sintetico, R1 pendente)",
+  "status": "INCONCLUSIVO",
+  "label": "SINTETICO",
+  "nota_r1": "NUNCA declarar lucrativo sem prova (R1). Gate R1 ainda PENDENTE.",
+  "nota_r9": "Codigo limpo (backtest_core.py sem torch); torch ambiental (anaconda3) registrado.",
+  "fases_concluidas": {
+    "fase_0": {"commit": "8cb4fa3", "status": "GREEN (3/3)", "testes": "test_backtest_core.py"},
+    "fase_2": {"commit": "70b8acf", "status": "GREEN (3/3)", "testes": "test_monte_carlo.py, test_deflated_sharpe.py"},
+    "fase_3": {"commit": "42c20ce", "status": "PARCIAL (1/1, estrutura)", "testes": "test_walk_forward_tdd.py"}
+  },
+  "checkpoints": {
+    "fase_0": "work/checkpoint_fase0.json",
+    "fase_2": "work/checkpoint_fase2.json",
+    "fase_3": "work/checkpoint_fase3.json (prev=70b8acf)"
+  },
+  "data_geracao": "2026-10-22"
+}

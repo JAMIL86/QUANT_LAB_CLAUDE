@@ -63,3 +63,10 @@ Nenhum ainda — TDD red é estado esperado, não erro.
 - walk_forward.py: 1129 bytes (estrutura existente, não completo).
 - Nenhum .env; código limpo de torch (R9).
 - Próximo autorizado apenas após gate R1 aprovado (não avançar para Fase 4 sem prova).
+
+## 2026-10-22 — Fase 4 relatório (gerado com R1 pendente)
+- reports/relatorio-fase4.json (879 bytes) + .html (759 bytes) criados.
+- Status HONESTO: INCONCLUSIVO, SINTETICO — nunca "lucrativo" (R1 respeitado).
+- Combinado F0-F3 com commits 8cb4fa3 / 70b8acf / 42c20ce.
+- Gate R1 ainda PENDENTE — relatório não implica aprovação.
+- Nenhum segredo; .env ausente.
