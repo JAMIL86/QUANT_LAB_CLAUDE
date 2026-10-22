@@ -56,3 +56,10 @@ Nenhum ainda — TDD red é estado esperado, não erro.
 - checkpoint_fase2.json criado (hash a3490754618dcaa3, status INCONCLUSIVO, prev 8cb4fa3).
 - RESUME.md atualizado com seção Fase 2.
 - Nenhum .env commitado; R9 respeitado (código limpo, torch ambiental registrado).
+
+## 2026-10-22 — Fase 3 PBO / walk_forward (prova real)
+- pytest test_walk_forward_tdd.py: 1 PASSED (test_walk_forward_structure).
+- checkpoint_fase3.json atualizado: prev_commit=70b8acf, status=INCONCLUSIVO, gate R1 pendente.
+- walk_forward.py: 1129 bytes (estrutura existente, não completo).
+- Nenhum .env; código limpo de torch (R9).
+- Próximo autorizado apenas após gate R1 aprovado (não avançar para Fase 4 sem prova).

@@ -45,3 +45,10 @@ Retomar Fase 0 (backtest XAUUSD/MT5) após encerramento forçado. Não repetir e
 - Gate R1 ainda pendente (nunca declarar lucrativo sem prova).
 - Commit do checkpoint será feito após atualização de WORKLOG.md.
 - Próximo autorizado apenas após aprovação de R1 (não avançar para Fase 3 sem gate).
+
+## 2026-10-22 — Fase 3 PBO / walk_forward (checkpoint atualizado)
+- Commit anterior: 70b8acf (Fase 2).
+- TDD: test_walk_forward_tdd.py 1/1 PASSED.
+- Checkpoint: work/checkpoint_fase3.json atualizado (prev=70b8acf, status INCONCLUSIVO, R1 pendente).
+- Gate R1: NÃO aprovado — não declarar lucrativo sem prova.
+- Próximo autorizado: Fase 3 completo (PBO) apenas após gate R1; Fase 4 (relatório) só após todos os gates.

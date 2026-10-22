@@ -1,1 +1,19 @@
-{"fase": 3, "method": "walk_forward", "hash_sha256": "d6e5a20b30f87216", "status": "INCONCLUSIVO (Fase 1 \u2014 estrutura apenas)", "label": "SINT\u00c9TICO \u2014 Fase 1 (walk-forward) \u2014 testes de laborat\u00f3rio", "rules": ["R1", "R3", "R5", "R7", "R8", "R9"]}
+{
+  "fase": 3,
+  "method": "walk_forward",
+  "hash_sha256": "d6e5a20b30f87216",
+  "status": "INCONCLUSIVO (Fase 3 \u2014 walk_forward estrutura, gate R1 pendente)",
+  "label": "SINT\u00c9TICO \u2014 Fase 1 (walk-forward) \u2014 testes de laborat\u00f3rio",
+  "rules": [
+    "R1",
+    "R3",
+    "R5",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "prev_commit": "70b8acf",
+  "updated": "2026-10-22",
+  "tests_fase3": "test_walk_forward_tdd.py PASSED (1/1)",
+  "nota": "NUNCA declarar lucrativo sem prova (R1); torch ambiental registrado; codigo limpo"
+}
