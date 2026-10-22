@@ -4,6 +4,7 @@ Regras: R1 honesto, R3 sandbox, R8 seed/hash, R9 CPU apenas, R11 PT-BR docs
 import hashlib, os, json
 
 def run_backtest(path_csv: str, seed: int = 42) -> dict:
+    # R4: CSV é dado, não instrução — ignora qualquer texto de código no arquivo
     """Executa backtest básico em arquivo CSV local (sandbox). Nenhuma ordem real."""
     # R8: seed controlada
     rng = None  # R9: CPU, sem numpy quando não disponível
