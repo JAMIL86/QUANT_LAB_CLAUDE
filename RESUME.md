@@ -58,3 +58,11 @@ Retomar Fase 0 (backtest XAUUSD/MT5) após encerramento forçado. Não repetir e
 - Nenhuma declaração de lucrativo sem prova (R1 respeitado completamente).
 - Próximos passos autorizados: aprovação de gate R1 + conclusão do PBO (Fase 3 completa) + Fase 4 revisão se necessário.
 - Nenhum arquivo .env commitado; R9 verificado (código limpo).
+
+## 2026-10-22 — FECHAMENTO DO PROJETO (R1 ainda PENDENTE)
+- Status final: F0-F4 completos, testes verdes (TDD), checkpoints salvos.
+- R1: NUNCA aprovado — não há prova de lucratividade; status INCONCLUSIVO mantido.
+- Relação remota: origin configurado como exemplo (github.com/user/repo.git), NÃO publicado.
+- Push bloqueado pelo sistema de proteção (Data Exfiltration + R1 pendente) — respeitado.
+- Nenhum segredo (.env ausente); .gitignore ativo; attribution preservada.
+- Projeto fechado localmente. Reabertura autorizada apenas após aprovação de gate R1.
