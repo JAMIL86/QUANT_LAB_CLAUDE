@@ -40,3 +40,4 @@ Nenhum ainda — TDD red é estado esperado, não erro.
 > Próximo: Fase 3 (PBO completo) — só após gate R1
 > Fase 3 walk_forward TDD green (R1/R5/R8) — 2026-10-21
 > Fase 3 Monte Carlo TDD green (R1/R7/R8) — 2026-10-21
+> Próximo: aguardando instrução do usuário

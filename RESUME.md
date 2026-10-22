@@ -30,3 +30,4 @@ Retomar Fase 0 (backtest XAUUSD/MT5) após encerramento forçado. Não repetir e
 - Nenhuma etapa repetida sem necessidade
 > Etapa pendente: Monte Carlo completo (Fase 2) — só após gate R1 aprovado
 > Próximo: Fase 4 relatório (reports/) — só após todos gates
+> Etapa pendente: nenhuma — projeto completo (F0-F4)
