@@ -34,3 +34,7 @@ Nenhum ainda — TDD red é estado esperado, não erro.
 - Nenhum `torch`/`numpy` usado (R9), CSV lido como dado (R4), nunca "lucrativo" (R1).
 - Checkpoint: `work/checkpoint_fase0.json` a criar no próximo passo.
 - Nenhum segredo commitado; `.env` não presente no projeto.
+> Completado: TDD green (3/3), checkpoint salvo, commit fbacc74
+> Etapa Fase 0: CONCLUÍDA. Próximo: Fase 2 (Monte Carlo) apenas após gate R1 aprovado.
+> Fase 2 TDD green (deflated_sharpe/pbo) — 2026-10-21
+> Próximo: Fase 3 (PBO completo) — só após gate R1
