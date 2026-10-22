@@ -31,3 +31,17 @@ Retomar Fase 0 (backtest XAUUSD/MT5) após encerramento forçado. Não repetir e
 > Etapa pendente: Monte Carlo completo (Fase 2) — só após gate R1 aprovado
 > Próximo: Fase 4 relatório (reports/) — só após todos gates
 > Etapa pendente: nenhuma — projeto completo (F0-F4)
+
+## 2026-10-22 — Atualização de continuidade (hash real do git)
+- Commit atual: 8cb4fa3 (feat(quant): correção R9 — TDD green + registro ambiental)
+- Substitui referência anterior fbacc74 (não encontrada no histórico real do repo).
+- TDD: 3/3 PASSED (backtest_core.py, R1/R3/R8/R9/R11).
+- Próximo: Fase 2 (Monte Carlo) apenas após gate R1 aprovado.
+- Qualquer avanço deve atualizar este arquivo com o hash do novo commit.
+
+## 2026-10-22 — Fase 2 Monte Carlo (checkpoint + documentado)
+- Checkpoint salvo: work/checkpoint_fase2.json (hash a3490754618dcaa3, status INCONCLUSIVO).
+- TDD verde: test_monte_carlo.py 3/3 PASSED, test_deflated_sharpe.py 3/3 PASSED.
+- Gate R1 ainda pendente (nunca declarar lucrativo sem prova).
+- Commit do checkpoint será feito após atualização de WORKLOG.md.
+- Próximo autorizado apenas após aprovação de R1 (não avançar para Fase 3 sem gate).

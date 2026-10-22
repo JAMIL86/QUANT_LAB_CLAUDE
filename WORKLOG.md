@@ -49,3 +49,10 @@ Nenhum ainda — TDD red é estado esperado, não erro.
 - Resultado pytest: 3/3 PASSED (test_reproducibility_seed, test_sandbox_is_isolated, test_no_pytorch_used).
 - Nenhum segredo commitado; .env não presente.
 - Commit: feat(quant): correção R9 — TDD green + registro ambiental
+
+## 2026-10-22 — Fase 2 Monte Carlo (prova real)
+- pytest test_monte_carlo.py: 3 PASSED.
+- pytest test_deflated_sharpe.py: 3 PASSED.
+- checkpoint_fase2.json criado (hash a3490754618dcaa3, status INCONCLUSIVO, prev 8cb4fa3).
+- RESUME.md atualizado com seção Fase 2.
+- Nenhum .env commitado; R9 respeitado (código limpo, torch ambiental registrado).

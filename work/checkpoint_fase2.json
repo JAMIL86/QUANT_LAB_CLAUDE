@@ -1,0 +1,12 @@
+{
+  "fase": 2,
+  "label": "SINTETICO",
+  "status": "INCONCLUSIVO (dados basicos, gate R1 pendente)",
+  "tests": "3/3 PASSED (monte_carlo, deflated_sharpe)",
+  "seed": 42,
+  "hash_sha256": "a3490754618dcaa3",
+  "prev_commit": "8cb4fa3",
+  "nota_r1": "Nunca declarar lucrativo sem prova (R1)",
+  "nota_r9": "torch ambiental; codigo limpo (verificado grep)",
+  "data": "2026-10-22"
+}
