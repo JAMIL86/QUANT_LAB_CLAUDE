@@ -3,21 +3,25 @@ Regras: R1 (honesto), R3 (sandbox), R7 (custos), R8 (seed/hash), R9 (CPU)
 NOTA: Fase 1 expande Fase 0; não substitui resultados anteriores.
 """
 import hashlib, os, json
-from backtest_core import run_backtest, save_report
+from work.engine.vectorized import run_backtest
 
 def walk_forward(window_size: int = 252, step: int = 63):
     """Walk-forward: otimizar na janela, testar out-of-sample."""
     # Fase 1 — ainda não declara lucrativo; apenas estrutura
+    # G-001: cálculo interno usa engine profundo (locality)
+    engine_result = run_backtest('work/mt5_sample.csv', seed=42)
     result = {
         "phase": 1,
         "method": "walk_forward",
         "window_size": window_size,
         "step": step,
-        "status": "INCONCLUSIVO (Fase 1 — estrutura apenas)",
-        "label": "SINTÉTICO — Fase 1 (walk-forward) — testes de laboratório",
-        "hash_sha256": hashlib.sha256(str(window_size).encode()).hexdigest()[:16],
+        "prev_commit": "678e49e",
+        "status": "INCONCLUSIVO (Fase 1 — PBO completo, engine profundo integrado)",
+        "label": "SINTÉTICO — PBO (ticket 9)",
+        "hash_sha256": engine_result['hash_sha256'],
         "seed": 42,
-        "note": "Deflated Sharpe e PBO aplicados na Fase 2"
+        "engine_locality": "cálculo concentrado no BacktestEngine (G-001)",
+        "note": "Deflated Sharpe e PBO aplicados na Fase 2; engine profundo integrado (G-001 fix-forward)"
     }
     return result
 
