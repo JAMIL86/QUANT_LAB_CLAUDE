@@ -1,8 +1,9 @@
 # ADR-ENGINE-DEEP — Deepening do engine (reconstruído, retro)
 
-Status: `proposed (reconstructed)` — não contemporâneo à decisão original.
+Status: `implemented` — decisão implementada em 2026-10-23 (commit 5494b2a).
 Data do retro: 2026-10-22.
 Data original (inferida): anterior ao commit `42c20ce` (Fase 3 PBO).
+Data de implementação: 2026-10-23.
 
 ## Decisão original (observada no código)
 
