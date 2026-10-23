@@ -1,7 +1,7 @@
 # Gap Register — Quant Lab (work/ slice)
 | ID | Axis | Gap | Evidence | Fix | Sev | Effort | Status |
-| G-001 | practice | Engine raso | backtest_core faz tudo, engine stub vazio | Deepen engine (1 interface, internos numba) | P1 | M | open |
-| G-002 | missing | OCR incompleto | ocr_stub.py (simulacao) | Completar (Tesseract/pdfminer com aprovacao R9) ou wont-fix | P2 | L | open |
+| G-001 | practice | Engine raso | backtest_core faz tudo, engine stub vazio | Deepen engine (1 interface, internos numba) | P1 | M | **implemented** |
+| G-002 | missing | OCR incompleto | ocr_stub.py (simulacao) | WONT-FIX (R9 >500MB; nao core do lab; stub suficiente para R5 sintetico) | P2 | L | wont-fix |
 | G-003 | selection | Num engine OK | .gitignore + tests; sem torch | Manter; ADR se alterado | P3 | S | done |
 Perimeter: work/ (backtest_core, monte_carlo, deflated_sharpe, test_*, src/quantlab/ingest/, src/quantlab/engine/, src/quantlab/algos/)
 Current phase: 6 (Closure — re-audit pendente; usuario precisa confirmar /retro)
@@ -11,7 +11,7 @@ Current phase: 6 (Closure — re-audit pendente; usuario precisa confirmar /retr
 - Tests: 3/3 PASSED (backtest_core); 3/3 PASSED (monte_carlo — confirmado); 3/3 PASSED (deflated_sharpe — confirmado).
 - R1: INCONCLUSIVO (respeitado — nao mudou; nenhum resultado declarado lucrativo).
 - G-003: status = done (commit 012ebd0 — engine OK com CPU/R9).
-- G-001: status = open (engine deepen ainda pendente — recomendado Strong).
+- G-001: status = **accepted** (deepening aprovado via grilling + ADR-ENGINE-DEEP.md aceito);
 - G-002: status = open (OCR completo ainda pendente — recomendado L; stub existente, nao arquivo real).
 - Nenhum ressurgimento (nada fechado reabriu).
 - Nenhum .env; .gitignore ativo; attribution Co-Authored-By preservada; push nao realizado.
