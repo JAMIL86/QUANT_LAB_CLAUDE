@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chimera-quant-terminal"
+version = "0.1.0"
+description = "Institutional-grade MT5 trading system with Hilbert, ISOM, Kalman, and Chimera 2D SSM"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
