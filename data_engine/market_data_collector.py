@@ -153,7 +153,8 @@ class MarketDataCollector:
                         elif state.candle_count > 0:
                             state.last_poll_time = state.candle_builder.latest().close_time
                         else:
-                            state.last_poll_time = datetime.utcnow()
+                            # Use 5 minutes ago to ensure we have ticks to fetch
+                            state.last_poll_time = datetime.utcnow() - timedelta(minutes=5)
 
                     ticks_np = self.agent.copy_ticks_from(
                         symbol=target_symbol,
