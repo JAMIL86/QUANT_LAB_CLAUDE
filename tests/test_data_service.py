@@ -1,4 +1,6 @@
 import pytest
+import ast
+import inspect
 from web.data_service import calculate_price, intelligence_core, get_market_intelligence
 
 
@@ -93,3 +95,37 @@ def test_get_market_intelligence_returns_normal_result_when_success():
     assert result["signal"] == "buy"
     assert result["confidence"] == 0.85
     assert result["processed_at"] == "2024-01-15T10:30:00Z"
+
+
+def test_no_dead_code_funding_by_pair():
+    """
+    Teste de regressão para o bug ALTO da linha 238.
+
+    BUG: Variável funding_by_pair definida mas nunca utilizada (dead code).
+
+    Correção: Remover a variável funding_by_pair não utilizada.
+
+    Este teste FALHA se funding_by_pair existir no módulo (dead code presente).
+    Este teste PASSA se funding_by_pair NÃO existir (dead code removido).
+    """
+    import web.data_service as ds
+
+    # Testa que NÃO existe a variável funding_by_pair
+    assert not hasattr(ds, 'funding_by_pair'), \
+        "DEAD CODE DETECTADO: funding_by_pair ainda existe no módulo. Deve ser removida."
+
+
+def test_no_dead_code_private_functions():
+    """Testa que não existem funções privadas não utilizadas."""
+    import web.data_service as ds
+
+    # Testa que NÃO existe _calculate_funding_impact ou similar
+    dead_code_names = [
+        '_calculate_funding_impact',
+        'calculate_funding_impact',
+        'funding_by_pair',
+    ]
+
+    for name in dead_code_names:
+        assert not hasattr(ds, name), \
+            f"DEAD CODE DETECTADO: {name} ainda existe no módulo. Deve ser removido."
