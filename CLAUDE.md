@@ -1,10 +1,11 @@
-﻿# 🧠 CONTRATO DE ENGENHARIA: CRYPTO HUNTER (v2.0)
+# 🧠 CONTRATO DE ENGENHARIA: CRYPTO HUNTER (v2.0)
 
 **AVISO CRÍTICO:** Este arquivo é a LEI do projeto. Você (Claude Code) deve lê-lo no início de CADA sessão. Se uma instrução do usuário violar este contrato, você deve recusar e explicar o motivo.
 
 ---
 
 ## ⚠️ PARTE 0: GUARDA DE SISTEMA OPERACIONAL (GATEKEEPER)
+
 Você está rodando em um ambiente **Windows PowerShell**. 
 - É TERMINANTEMENTE PROIBIDO usar sintaxe Bash (grep, awk, sed, cat). 
 - Use `Select-String`, `Get-Content` ou as ferramentas nativas do Claude Code (Read, Glob, Grep).
@@ -14,6 +15,7 @@ Você está rodando em um ambiente **Windows PowerShell**.
 ---
 
 ## 🏛️ PARTE 1: OS 4 PILARES DA ENGENHARIA (KARPATHY)
+
 1. **PENSE ANTES DE CODAR**: Nunca assuma interpretações. Apresente trade-offs. Se não entendeu, diga "Não entendi X".
 2. **SIMPLICIDADE PRIMEIRO**: Não crie abstrações para uso único. Escreva o mínimo necessário.
 3. **MUDANÇAS CIRÚRGICAS**: Não refatore código adjacente. Remova apenas o que a sua mudança tornou órfão.
@@ -35,13 +37,13 @@ Skills são manuais de instruções que você carrega sob demanda. Elas ensinam 
 ### 2.2 MCP (O "O Quê" - Ferramentas e Dados)
 MCP é a camada de conexão com o mundo externo (APIs, bancos de dados). **Nunca crie um MCP se uma Skill resolver.**
 - **`sequential-thinking`**: Obrigatório para cálculos de taxa, edge, lucro.
-- **`context7`**: Obrigatório para consultar sintaxe de bibliotecas (`ccxt`, `pandas`). **PROIBIDO** inventar sintaxe.
+- **`context7`**: Obrigatório para consultar sintaxe de bibliotecas (`ccxt`, `pandas`, `FastAPI`). **PROIBIDO** inventar sintaxe.
 - **`mt5`**: Obrigatório para validar ordens e cotações em tempo real.
 - **`playwright`**: Obrigatório para testar o frontend visualmente.
 
 ### 2.3 RAG (O "Conhecimento" - Base de Dados Privada)
 RAG é a camada de **conhecimento factual** que você não pode inventar. Sempre que precisar de informações sobre o projeto, consulte a base RAG (se disponível) antes de responder.
-- **Fontes:** Documentos em `./docs/`, logs de trades, estratégias em PDF, histórico de decisões.
+- **Fontes:** Documentos em `./docs/`, logs de trades, estratégias en PDF, histórico de decisões.
 - **Pipeline:** Se o usuário pedir para implementar RAG, siga o padrão: Ingestão (Chunking 400-512 tokens, overlap 10-20%) → Embedding (via OmniRoute) → Vector DB (ChromaDB local) → Retrieval → Generation.
 - **Regra de Ouro:** Use RAG para **fatos** (o que o modelo não sabe) e Fine-Tuning para **comportamento** (como o modelo responde). Não use RAG para ensinar estilo.
 
@@ -87,9 +89,9 @@ Bugs de cálculo têm prioridade absoluta.
 ### Fila Atual de Correções
 | Severidade | Linha | Arquivo | Problema | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| 🔴 **CRÍTICO** | 259 | `web/data_service.py` | `price_b = edge/1000` (deveria ser `1+edge`) | **CORRIGIR AGORA** |
-| 🔴 **CRÍTICO** | 358 | `web/data_service.py` | Sem fallback se `intelligence_core` quebra | Aguardando |
-| 🟠 ALTO | 238 | `web/data_service.py` | Dead code: `funding_by_pair` nunca usado | Aguardando |
+| 🔴 **CRÍTICO** | 259 | `web/data_service.py` | `price_b = edge/1000` (deveria ser `1+edge`) | **CORRIGIDO** |
+| 🔴 **CRÍTICO** | 358 | `web/data_service.py` | Sem fallback se `intelligence_core` quebra | **CORRIGIDO** |
+| 🟠 ALTO | 238 | `web/data_service.py` | Dead code: `funding_by_pair` nunca usado | **CORRIGIDO** |
 
 ### Protocolo de Correção
 1. **`/tdd`**: Escreva o teste de regressão (RED). Ele deve falhar.
@@ -138,4 +140,5 @@ Se o usuário solicitar melhorias na inteligência do sistema, siga estas regras
 - **Baseline Obrigatório:** Antes de treinar, compare com o modelo base + prompt few-shot. Se o Fine-Tuning não superar o baseline, descarte.
 
 ---
-**LEMBRETE FINAL:** Se você (Claude) estiver prestes a responder algo que viole este contrato, PARE. Diga: "Não posso fazer X porque viola a regra Y do CLAUDE.md. Posso fazer Z, que é compatível." O usuário prefere uma recusa honesta a uma resposta que quebre a arquitetura.
+
+**LEMBRETE FINAL:** Se você (Claude) estiver prestes a responder algo que viole este contrato, PARE. Diga: "Não posso fazer X porque viola a regra Y do CLAUDE.md. Posso fazer Z, que é compatível." O usuário prefere uma recusa honesta a uma resposta que quebre la arquitetura.

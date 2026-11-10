@@ -1,0 +1,22 @@
+{
+  "fase": 0,
+  "seed": 42,
+  "hash_sha256": "efc1b968ff2060ea",
+  "metrics": {
+    "sharpe": 0.3852,
+    "drawdown_max": 0,
+    "trades": 3
+  },
+  "status": "INCONCLUSIVO (Fase 0 \u2014 dados b\u00e1sicos apenas; sem prova de robustez)",
+  "rules": [
+    "R1",
+    "R3",
+    "R4",
+    "R8",
+    "R9",
+    "R11"
+  ],
+  "label": "SINT\u00c9TICO \u2014 para testes do laborat\u00f3rio apenas (R5)",
+  "arquivo": "work/mt5_sample.csv",
+  "data": "2026-10-21"
+}

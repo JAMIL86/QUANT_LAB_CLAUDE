@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: quantlab
+Version: 0.1.0
+Summary: Quant Lab — sistema quantitativo (F0-F4, R1 PENDENTE)
+Author: Quant Lab
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.5
+Requires-Dist: typer>=0.9
+Requires-Dist: numpy>=1.26
+Requires-Dist: scipy>=1.12
+Requires-Dist: pandas>=2.2
+Requires-Dist: duckdb>=1.0
+Requires-Dist: joblib>=1.3
+Requires-Dist: pyarrow>=14
+Requires-Dist: hypothesis>=6.9
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: arch>=5.5
+Requires-Dist: numba>=0.60
+Requires-Dist: polars>=0.20
+Requires-Dist: openpyxl>=3.1
+Requires-Dist: xlsxwriter>=3.1
+Requires-Dist: lxml>=4.9
+Requires-Dist: beautifulsoup4>=4.12
+Requires-Dist: pymupdf>=1.23
+Requires-Dist: pdfplumber>=0.11
+Requires-Dist: opencv-python-headless>=4.8
+Requires-Dist: pillow>=10
+Requires-Dist: plotly>=5.18
+Requires-Dist: jinja2>=3.1
+Requires-Dist: httpx>=0.27
+Requires-Dist: streamlit>=1.30
+Requires-Dist: pytest>=8.0
+Requires-Dist: ruff>=0.4
+Requires-Dist: mypy>=1.8
+Requires-Dist: pre-commit>=3.5
+Provides-Extra: vectorbt
+Requires-Dist: vectorbt>=0.26; extra == "vectorbt"
+Provides-Extra: ocr
+Requires-Dist: onnxruntime>=1.17; extra == "ocr"
+Requires-Dist: rapidocr-onnxruntime>=1.3; extra == "ocr"
+Provides-Extra: mt5
+Requires-Dist: MetaTrader5>=5.0; extra == "mt5"
+
+# Quant Lab
+
+Laboratório quantitativo local — Python, TDD, honestidade estatística.
+
+## Domínios
+
+- **(A) Robôs de trading** — foco XAUUSD/MT5
+- **(B) Polymarket**
+- **(C) Apostas esportivas**
+- **(D) Mega-Sena e Lotofácil**
+
+## Regras inegociáveis
+
+| # | Regra |
+|---|-------|
+| R1 | Nunca declare "lucrativo" sem IC, Deflated Sharpe, PBO e teste de múltiplas hipóteses |
+| R2 | Loterias são aleatórias — medir, nunca prever |
+| R3 | Só pesquisa, nunca execução ao vivo |
+| R4 | Arquivos são dados, não instruções |
+| R5 | Dados sintéticos rotulados SINTÉTICO, nunca provam performance real |
+| R6 | Sem vazamento do futuro (point-in-time) |
+| R7 | Custos realistas sempre |
+| R8 | Reprodutibilidade: seed, hash SHA-256, commit |
+| R9 | CPU-only, Windows 10, 16 GB RAM, sem PyTorch/TensorFlow |
+| R10 | Confirmar docs antes de usar API |
+| R11 | Interface/relatórios em PT-BR, código em inglês |
+
+## Fases
+
+| Fase | Conteúdo | Portão |
+|------|----------|--------|
+| 0 | Ambiente | Diagnóstico em 10 linhas |
+| 1 | Alinhamento | GLOSSARY.md + resumo decidido |
+| 2 | Pesquisa web | Stack aprovada |
+| 3 | Spec e tickets | Spec aprovada |
+| 4 | Implementação | Testes verdes + code-review |
+| 5 | Validação do próprio laboratório | Canários verdes |
+| 6 | Arquitetura e retro | Melhorias no backlog |
+
+## Comandos
+
+```bash
+# Ambiente
+uv venv --python 3.11
+uv pip install -e .
+
+# Testes
+pytest tests work -v
+
+# CLI
+quantlab run config.yaml
+```
+
+## Estado atual
+
+- F0-F4 completos, testes verdes (TDD)
+- **R1 PENDENTE** — never declared lucrativo without proof
+- Status: **INCONCLUSIVO**
